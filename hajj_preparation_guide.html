@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हज की तैयारी का मरहलावार प्रोग्राम और चेकलिस्ट</title>
+    
+    <!-- Google Fonts for Premium Devanagari Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700&family=Noto+Serif+Devanagari:wght@400;700&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --primary-color: #004B49;     /* Deep Emerald Green */
+            --primary-light: #e6f0ef;
+            --secondary-color: #C5A85C;   /* Warm Gold */
+            --text-dark: #2A2A2A;         /* Charcoal Text */
+            --text-light: #5A5A5A;
+            --bg-color: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --border-color: #D4C59A;      /* Pale Gold Border */
+            --shadow: 0 4px 15px rgba(0, 75, 73, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            font-size: 18px; /* accessibility scale-up for elderly readability */
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background-color: var(--bg-color);
+            color: #111; /* maximum contrast color */
+            line-height: 1.7; /* increased spacing to prevent reading fatigue */
+            padding: 30px 15px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Noto Serif Devanagari', serif;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1376px; /* optimal width for 1440px desktop viewports */
+            width: 100%;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* HEADER SECTION */
+        .header {
+            text-align: center;
+            border-bottom: 2px double var(--secondary-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .header .bismillah {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* FLOATING PRINT BUTTON */
+        .no-print-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .print-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--secondary-color);
+            padding: 10px 20px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .print-btn:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* INTRODUCTION PANEL */
+        .intro-box {
+            background-color: var(--primary-light);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        .intro-box p {
+            margin-bottom: 10px;
+        }
+
+        .intro-box strong {
+            color: var(--primary-color);
+        }
+
+        /* PHASE CARD STYLE */
+        .phase-section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .phase-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phase-title span.number {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-family: 'Cinzel', sans-serif;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .phase-time {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            background-color: var(--primary-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .checklist {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .checklist-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* CUSTOM CHECKBOX STYLE */
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            user-select: none;
+        }
+
+        .checkbox-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            margin-top: 3px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .checkbox-container:hover input ~ .checkmark {
+            background-color: var(--primary-light);
+        }
+
+        .checkbox-container input:checked ~ .checkmark {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkbox-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .checkbox-container .checkmark:after {
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .checklist-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            flex-grow: 1;
+        }
+
+        .checklist-text strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .checklist-text span.hint {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* TABLES STYLE FOR TRACKING */
+        .tracker-section {
+            margin-top: 50px;
+            page-break-before: always;
+        }
+
+        .tracker-title {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+            font-family: 'Noto Serif Devanagari', serif;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9faf9;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        input[type="number"]:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--primary-light);
+        }
+
+        /* FOOTER DECORATION */
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px double var(--secondary-color);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .footer-note p {
+            margin-bottom: 5px;
+        }
+
+        /* PRINT CONFIGURATION */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                padding: 0;
+                font-size: 12pt;
+            }
+
+            .container {
+                max-width: 100%;
+                width: 100%;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .phase-section {
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+
+            .tracker-section {
+                page-break-before: always;
+            }
+
+            /* Custom styling for print checkboxes to ensure they show up as empty squares */
+            .checkmark {
+                border: 2px solid #000 !important;
+                background-color: transparent !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            th {
+                background-color: #004B49 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            table, th, td {
+                border: 1px solid #666 !important;
+            }
+
+            input[type="number"], input[type="text"] {
+                border: none;
+                border-bottom: 1px dotted #000;
+                background: transparent;
+            }
+        }
+
+        /* DYNAMIC APP STYLES */
+        .add-row-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--secondary-color);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+        }
+
+        .add-row-btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #d9534f;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2rem;
+            line-height: 1;
+            padding: 4px 8px;
+            transition: var(--transition);
+        }
+
+        .delete-btn:hover {
+            color: #c9302c;
+            transform: scale(1.2);
+        }
+
+        td.chk-cell {
+            padding: 8px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        td.chk-cell input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+
+        /* PROGRESS LOG & HISTORY DASHBOARD STYLES */
+        .log-card {
+            background-color: #faf9f5;
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .log-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .log-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .log-group {
+            margin-bottom: 15px;
+        }
+
+        .log-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .log-group input, .log-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .tab-btn {
+            background-color: white;
+            border: 1px solid var(--secondary-color);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-weight: 500;
+        }
+
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background-color: white;
+        }
+
+        .history-table th, .history-table td {
+            border: 1px solid var(--secondary-color);
+            padding: 8px 10px;
+            text-align: center;
+        }
+
+        .history-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .wazifa-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+            gap: 15px;
+        }
+
+        .wazifa-item-row:last-child {
+            border-bottom: none;
+        }
+
+        /* MOBILE VIEWPORT AND TABLET LAYOUT OVERRIDES */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px; /* slightly smaller base on mobile devices */
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+                border-radius: 8px;
+                border-width: 1px;
+            }
+
+            .header {
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .phase-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .phase-time {
+                align-self: flex-end;
+            }
+
+            .print-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            input[type="number"], input[type="text"], select {
+                padding: 6px;
+                font-size: 0.9rem;
+            }
+
+            .log-card {
+                padding: 12px;
+            }
+
+            .tab-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            /* Prevent table content squishing on small screens */
+            .table-responsive {
+                border: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FLOATING PRINT BUTTON -->
+    <div class="no-print-btn-container no-print">
+        <button class="print-btn" onclick="window.print()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            शेड्यूल प्रिंट करें / PDF सेव करें
+        </button>
+    </div>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <div class="header">
+            <h1>हज की तैयारी का मरहलावार प्रोग्राम</h1>
+            <div class="subtitle">10 महीने की रहनुमाई और चेकलिस्ट (रूहानी, अमली और जिस्मानी तैयारी)</div>
+            <div style="font-size: 0.85rem; color: var(--secondary-color); font-weight: bold; margin-top: 5px; margin-bottom: 12px;">
+                "ऐ अल्लाह! मेरे लिए हज को आसान बना दे और इसे मेरी तरफ़ से क़बूल फ़रमा।" (आमीन)
+            </div>
+            <button type="button" class="no-print add-row-btn" onclick="window.print()" style="margin: 5px auto 0 auto; padding: 10px 20px; font-size: 0.95rem; border-radius: 6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                शेड्यूल प्रिंट करें / PDF सेव करें
+            </button>
+        </div>
+
+        <!-- INTRO BOX -->
+        <div class="intro-box">
+            <p><strong>प्यारे आज़मीन-ए-हज (हज यात्री),</strong></p>
+            <p>हज इस्लाम का एक अज़ीम रुक्न (स्तंभ) है। हमारा असल मक़सद <strong>'हज-ए-मबरूर' (यानी अल्लाह की बारगाह में मक़बूल हज)</strong> हासिल करना है, जिसके बारे में हदीस शरीफ़ में है कि उसका बदला सिर्फ़ जन्नत है। मक्का मुकर्रमा और मदीना तैयबा की मुक़द्दस वादियों में गुज़ारा गया हर लम्हा यादगार रहे और अल्लाह की क़ुर्बत व रज़ा से भरपूर हो, इसके लिए वक़्त पर तैयारी शुरू करना बेहद ज़रूरी है।</p>
+            <p>यह 10 महीने की रहनुमाई आपके रूहानी जज़्बे को बढ़ाने, जिस्मानी तंदुरुस्ती को मज़बूत करने और हज के ज़रूरी मसाइल (अहकाम) को सीखने में मदद करेगी। इस तैयारी में मक़बूल किताब <strong>'रफ़ीक़ुल हरमैन' (Rafiq-ul-Harmain)</strong> को असल हवाले (मुख्य संदर्भ) के तौर पर शामिल किया गया है। इसे अपने पास प्रिंट कर लें और रोज़ाना अपनी कारगुज़ारी (प्रगति) को जांचें।</p>
+        </div>
+
+        <!-- PHASE 1 -->
+        <div class="phase-section">
+            <div class="phase-header">
+                <div class="phase-title">
+                    <span class="number">I</span>
+                    तिलावत और नमाज़ की दुरुस्ती
+                </div>
+                <div class="phase-time">महीने 10 और 9</div>
+            </div>
+            
+            <ul class="checklist">
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>क़ुरआन पाक की तिलावत को दुरुस्त करना (तजवीद)</strong>
+                            रोज़ाना क़ुरआन पाक की तिलावत करें। सबसे पहले किसी अच्छे क़ारी साहब या मस्जिद के इमाम साहब को अपनी तिलावत सुनाएँ। अगर कोई ग़लतियां हों, तो नियमित रूप से उनके पास जाकर या उनकी रहनुमाई में सुधार (दुरुस्त) करें। तिलावत दुरुस्त करते समय समय-समय पर अपनी तिलावत या नमाज़ की तिलावत को ख़ुद ऑडियो रिकॉर्ड करके सुनें, ताकि आप अपनी कमियों को ख़ुद पहचान सकें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>नमाज़ के अहकाम को सीखना और जाँच कराना</strong>
+                            नमाज़ के फ़राइज़, वाजिबात, सुन्नत और नवाफ़िल के अहकाम को अच्छी तरह समझें और याद करें। यह सुनिश्चित करने के लिए कि आपकी नमाज़ के फ़राइज़ और वाजिबात सही-सही अदा हो रहे हैं या नहीं, किसी आलिम या क़ारी साहब के सामने एक बार नमाज़ पढ़कर इसकी जाँच ज़रूर करवा लें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>नमाज़ में पढ़ी जाने वाली सूरतों और दुआओं का तर्जुमा समझना</strong>
+                            सना (Sana), सूरह फ़ातिहा, सूरह, रुकू-सज्दे की तस्बीहात, अत्तहिय्यात, दरूद-ए-इब्राहिमी और दुआ-ए-मासूरा का हिन्दी/उर्दू अनुवाद (तर्जुमा) अच्छी तरह याद करें। नमाज़ के दौरान तर्जुमे पर ध्यान देना ही नमाज़ में दिल लगाने का सबसे पहला और कारगर रास्ता है।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>आख़िरी 12 सूरतों का तर्जुमा और तफ़सीर (Siratul Jinan App)</strong>
+                            मशहूर मोबाइल ऐप <strong>'सिरातुल जिनान' (Siratul Jinan)</strong> का इस्तेमाल करें। इस ऐप के ज़रिए क़ुरआन मजीद की आख़िरी 12 सूरतों (सूरह अल-फ़ील से सूरह अन-नास तक) का तर्जुमा और तफ़सीर ऑडियो फ़ॉर्मेट में सुनें या खुद पढ़ें, ताकि सूरतों का सच्चा पैग़ाम और मायने आपके ज़ेहन में बैठ जाएं।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>ग़ुस्से पर क़ाबू और अख़्लाक़ की दुरुस्ती (अमल की मश्क़)</strong>
+                            हज के दौरान सख़्त गर्मी, भारी भीड़ और थकान की वजह से लोग अक्सर सब्र खो देते हैं और आपस में लड़ बैठते हैं। ग़ुस्से पर क़ाबू पाने की मश्क़ (प्रैक्टिस) अभी से शुरू करें, ताकि वहाँ आप हर आज़माइश (कठिन परीक्षा) में मुस्कुराकर सब्र कर सकें और आपकी इबादत बिना किसी लड़ाई-झगड़े के मुकम्मल हो।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>बातिनी (आन्तरिक) गुनाहों से तौबा और दिल की पाकीज़गी</strong>
+                            ग़ीबत (पीठ पीछे बुराई), बुग़्ज़ (मन में द्वेष), कीना (कपट), अदावत (शत्रुता), तकब्बुर (घमंड), रियाकारी (दिखावा) और हसद (ईर्ष्या) जैसे बातिनी गुनाहों की मारफ़त (पहचान) हासिल करें। इन गुनाहों को अपनी ज़िन्दगी से जड़ से ख़त्म करने का पक्का इरादा करें और अपने दिल को दूसरों के लिए साफ़ व पाक बनाएँ।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>क़ल्ब (दिल) की सफ़ाई के लिए ख़ास वज़ीफ़ा</strong>
+                            दिल को साफ़ और नूरानी बनाने के लिए पूरे 10 महीनों के दौरान अंदाज़न <strong>70,000 बार 'ला इलाहा इल्लल्लाह' (La ilaha illallah)</strong> पढ़ने का मामूल बनाएँ। यह वज़ीफ़ा रूहानी पाकीज़गी और अल्लाह की नज़दीकी (क़ुर्बत) हासिल करने का बेहतरीन ज़रिया है।
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase-section">
+            <div class="phase-header">
+                <div class="phase-title">
+                    <span class="number">II</span>
+                    नमाज़ में ख़ुशू-ख़ुज़ू और क़ज़ा की अदायगी
+                </div>
+                <div class="phase-time">महीने 8 और 7</div>
+            </div>
+            
+            <ul class="checklist">
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>नमाज़ में ख़ुशू और ख़ुज़ू (एकाग्रता और नम्रता) बढ़ाना</strong>
+                            नमाज़ में ध्यान और आजिज़ाना जज़्बा पैदा करने के लिए इन अहकाम पर सख़्ती से अमल करें:
+                            <div style="margin-top: 10px; padding: 12px; border-left: 3px solid var(--primary-color); background-color: #fafafa; font-size: 0.9rem;">
+                                <strong style="color: var(--primary-color); display: block; margin-bottom: 5px;">A. ज़ेहन और ख़यालात पर क़ाबू (Handling Whispers):</strong>
+                                <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: square;">
+                                    <li><strong>वसवसों का इलाज:</strong> अगर नमाज़ में फ़ासिद ख़यालात (बुरे विचार) और वसवसे आते हैं, तो नमाज़ शुरू करने से पहले अपने उल्टे कंधे (बाएँ कंधे) की तरफ़ 3 बार हल्की थू-थू (सिर्फ़ हवा की आवाज़) करें और <em>"ला हौला वला क़ूव्वाता इल्ला बिल्लाह"</em> पढ़ें।</li>
+                                    <li><strong>आख़िरी नमाज़ का तसव्वुर:</strong> नमाज़ से पहले यह ज़ेहन बनाएं कि अल्लाह रब्बुल इज़्ज़त मुझे देख रहा है और यह तसव्वुर करें कि यह मेरी ज़िन्दगी की आख़िरी नमाज़ है।</li>
+                                </ul>
+
+                                <strong style="color: var(--primary-color); display: block; margin-bottom: 5px;">B. नमाज़ के दौरान नज़र की हिफ़ाज़त (Visual Focus):</strong>
+                                <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: square;">
+                                    <li><strong>क़ियाम (खड़े होते वक़्त):</strong> अपनी नज़र सिर्फ़ सजदे की जगह पर रखें।</li>
+                                    <li><strong>रुकू में:</strong> अपनी नज़र अपने दोनों पैरों (क़दमों) पर रखें।</li>
+                                    <li><strong>सजदे में:</strong> अपनी नज़र अपनी नाक पर टिका कर रखें।</li>
+                                    <li><strong>क़ादा (बैठकर अत्तहिय्यात पढ़ते वक़्त):</strong> अपनी नज़र अपनी गोद (lap) पर रखें।</li>
+                                </ul>
+
+                                <strong style="color: var(--primary-color); display: block; margin-bottom: 5px;">C. तिलावत और अदायगी (Recitation & Execution):</strong>
+                                <ul style="margin-left: 20px; list-style-type: square;">
+                                    <li><strong>सूरतें बदल-बदल कर पढ़ें:</strong> सूरह फ़ातिहा के बाद हर नमाज़ में एक ही सूरह पढ़ने के बजाय, अलग-अलग सूरतों को बदल-बदल कर पढ़ें। इससे ज़ेहन भटकेगा नहीं और नमाज़ का लुत्फ़ बढ़ेगा।</li>
+                                    <li><strong>तजवीद और मायने:</strong> तजवीद के क़ायदों पर अमल करें, एक-एक हर्फ़ को दुरुस्त अदा करें और जो कुछ पढ़ रहे हैं, उसके तर्जुमे पर ध्यान रखें।</li>
+                                    <li><strong>इत्मीनान और सुकून से नमाज़:</strong> नमाज़ जल्दी-जल्दी बिल्कुल न पढ़ें। नमाज़ के तमाम फ़राइज़, वाजिबात, सुन्नतें और मुस्तहब्बत को पूरे इत्मीनान (सुकून) और आहिस्ता-आहिस्ता अदा करें।</li>
+                                </ul>
+                            </div>
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>क़ज़ा नमाज़ों (Missed Prayers) का हिसाब और अदायगी</strong>
+                            ज़िन्दगी भर की छूटी हुई नमाज़ों (क़ज़ा-ए-उमरी) का हिसाब लगाएँ और रोज़ाना कम से कम एक दिन की क़ज़ा नमाज़ (फ़र्ज़ और वित्र) पढ़ने का मामूल (नियम) बनाएँ। (नीचे दिए गए ट्रैकर का उपयोग करें)
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>क़ज़ा रोज़ों (Missed Fasts) का हिसाब और उनकी अदायगी</strong>
+                            अगर गुज़रे हुए रमज़ान के कोई फ़र्ज़ रोज़े छूटे हों, तो उनका हिसाब लगाएँ और इन महीनों में धीरे-धीरे उनकी क़ज़ा अदा करने की कोशिश करें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>ज़कात के मसाइल और पिछली ज़कात की अदायगी</strong>
+                            ज़कात का हिसाब लगाने का सही तरीक़ा सीखें। अगर पिछले सालों की कोई ज़कात बाक़ी है, तो उसका हिसाब लगाकर उसे अदा करें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>हज के माल की पाकीज़गी (Halal Wealth Verification)</strong>
+                            यह पक्का करें कि जो माल (पैसा) आप हज के लिए इस्तेमाल कर रहे हैं वह पूरी तरह जायज़ और हलाल हो। अगर माल में किसी भी तरह की शक वाली या नापाक कमाई शामिल हो, तो उस नापाक माल को अलग करें।
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-section">
+            <div class="phase-header">
+                <div class="phase-title">
+                    <span class="number">III</span>
+                    रोज़ाना के वज़ाइफ़, दरूद शरीफ़ और नात-ए-पाक
+                </div>
+                <div class="phase-time">महीने 6 और 5</div>
+            </div>
+            
+            <ul class="checklist">
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>रोज़ाना के वज़ाइफ़ और ज़िक्र का मामूल (Daily Litany)</strong>
+                            उठते-बैठते, चलते-फिरते अल्लाह के ज़िक्र की आदत डालें। हज में इबादत का माहौल अचानक बटन दबाने से नहीं बनता, इसके लिए घर से ही आदत डालनी होगी। (दैनिक वज़ाइफ़ ट्रैकर में अपने पसंदीदा 4-5 वज़ाइफ़ लिखें)
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>दरूद-ए-पाक की कसरत (तर्जुमा के साथ)</strong>
+                            रोज़ाना कम से कम 100 बार दरूद शरीफ़ तर्जुमे के साथ पढ़ें (इसमें क़रीब 15 से 30 मिनट लगेंगे)। हरम शरीफ़ में दरूद पढ़ने का सवाब बहुत ज़्यादा है, इसलिए अभी से आदत डालें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>नात-ए-पाक याद करना और सुनना</strong>
+                            हुज़ूर ﷺ की मोहब्बत दिल में बढ़ाने के लिए नात-ए-पाक याद करें। अगर नात किसी दूसरी ज़बान (जैसे पंजाबी या फ़ारसी) में हो, तो उसका तर्जुमा और मतलब समझकर याद करें ताकि उसका दिल पर असर हो।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>कम से कम एक 'सलातो-सलाम' याद करना और समझना</strong>
+                            हुज़ूर ﷺ की बारगाह में पेश करने के लिए कम से कम एक सलातो-सलाम मुकम्मल याद करें। जैसे कि:<br>
+                            <span style="font-family: 'Noto Serif Devanagari', serif; font-weight: bold; display: block; padding: 6px 12px; border-left: 3px solid var(--secondary-color); margin: 6px 0; background: #faf9f5; font-size: 0.95rem;">
+                                <em>"काबे के बदरुद्दोज़ा तुम पे करोड़ों दुरूद,<br>
+                                तैबा के शम्सुद्दुहा तुम पे करोड़ों दुरूद।"</em>
+                            </span>
+                            सलाम के इन मुबारक़ अलफ़ाज़ का तर्जुमा और गहरा मतलब समझें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>हुज़ूर ﷺ की सुन्नत दुआओं को याद करना</strong>
+                            रोज़मर्रा की सुन्नत दुआएं (सोने-जागने, खाने, मस्जिद में दाख़िल होने और बाहर निकलने की दुआएं) उनके तर्जुमे के साथ ज़ुबानी याद करें।
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="phase-section">
+            <div class="phase-header">
+                <div class="phase-title">
+                    <span class="number">IV</span>
+                    जिस्मानी तंदुरुस्ती और चलने की आदत
+                </div>
+                <div class="phase-time">महीने 4 और 3</div>
+            </div>
+            
+            <ul class="checklist">
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>शुरुआती पैदल चलने का मामूल (2 से 3 किलोमीटर)</strong>
+                            हज के दौरान मिना, अराफ़ात और मुज़दलिफ़ा में कई किलोमीटर पैदल चलना पड़ता है। पहले हफ्ते में रोज़ाना 2-3 किमी आम रफ़्तार से चलने की आदत डालें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>पैदल चलने का फ़ासला बढ़ना (4 से 6 किलोमीटर)</strong>
+                            अगले कुछ हफ़्तों में फ़ासला बढ़ाकर 4, 5 और फिर 6 किलोमीटर करें। शुरू में हल्के क़दमों से चलें, फिर धीरे-धीरे तेज़ चलना शुरू करें ताकि पैरों में ताक़त पैदा हो।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>ज़्यादा फ़ासला तय करने की मशक़ (8 से 10 किलोमीटर)</strong>
+                            हफ़्ते में कम से कम एक बार लगातार 8 से 10 किलोमीटर पैदल चलने की मशक़ (अभ्यास) करें। वही आरामदायक जूते पहनें जो सफ़र में इस्तेमाल करने हों।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>सेहत और ख़ुराक का ख़्याल</strong>
+                            अपने खान-पान (ग़िज़ा) को दुरुस्त करें। सेहतमंद ख़ुराक लें और घुटनों व पैरों को मज़बूत रखने के लिए हल्की वर्ज़िश (व्यायाम) करें।
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- PHASE 5 -->
+        <div class="phase-section">
+            <div class="phase-header">
+                <div class="phase-title">
+                    <span class="number">V</span>
+                    हज के मसाइल, एहराम और ज़ियारत की तैयारी
+                </div>
+                <div class="phase-time">महीने 2 और 1</div>
+            </div>
+            
+            <ul class="checklist">
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>किताब 'रफ़ीक़ुल हरमैन' की नीयतों का मुताला</strong>
+                            किताब में दी गई अलग-अलग नीयतों (Niyyats) को अच्छी तरह पढ़ें। हर नीयत के ख़ास बिन्दुओं (Important Points) को समझें और यह तय करें कि उन पर कैसे अमल (अमल-पैरा) होना है।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>मक्का मुकर्रमा और मदीना तैयबा की अज़मत बताने वाली किताबों का मुताला</strong>
+                            मक्का और मदीना दोनों मुक़द्दस शहरों की अज़मत, तारीख़ (इतिहास) और फ़ज़ीलत बताने वाली मोतबर (प्रामाणिक) किताबों का मुताला करें ताकि अदब और एहतराम में इज़ाफ़ा हो।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>मक्का मुकर्रमा और मदीना शरीफ़ के मुक़द्दस मक़ामात (ज़ियारतों) की मालूमात इकट्ठा करना</strong>
+                            मक्का और मदीना के मुक़द्दस मक़ामात की पूरी जानकारी पहले से इकट्ठा करें। सिर्फ़ जगहों पर हाज़िरी देना मक़सद नहीं होना चाहिए; बल्कि हर मक़ाम के बारे में जानें कि वह क्यों मुक़द्दस है, वहाँ की क्या ख़ास फ़ज़ीलत (महत्ता) है, इतिहास में वहाँ क्या वाक़िया हुआ था, वहाँ क्या दुआएं मांगनी हैं और क्या आमाल करने हैं। जब आप वहाँ जाएँ, तो उस मक़ाम की अज़मत और अहमियत आपके दिल में हो ताकि आप उसके रूहानी फ़ायदे और फ़वाइद पूरी तरह हासिल कर सकें।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>एहराम की पाबंदियों को अच्छी तरह समझना</strong>
+                            एहराम की हालत में जो चीज़ें ममनू (वर्जित/प्रतिबंधित) हैं (जैसे ख़ुशबू लगाना, बाल काटना, मर्दों के लिए सिला हुआ कपड़ा पहनना वगैरह) उनके बारे में मुकम्मल मालूमात हासिल करें ताकि कोई ग़लती न हो।
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checklist-text">
+                            <strong>हुज़ूर ﷺ की बारगाह में सलाम पेश करने का अदब सीखना</strong>
+                            मदीना मुनव्वरा में सुब्ह-ओ-शाम बारगाह-ए-रिसालत ﷺ में हाज़िरी और अदब व एहतराम के साथ सलातो-सलाम पेश करने का सही तरीक़ा सीखें।
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- TRACKERS SECTION (PAGE BREAK) -->
+        <div class="tracker-section">
+            <h2 class="tracker-title">रोज़ाना और अमली ट्रैकर शीट्स</h2>
+
+            <!-- QAZA NAMAZ TRACKER -->
+            <h3 style="margin-bottom: 12px; font-size: 1.15rem; color: var(--primary-color); position: relative;">
+                1. क़ज़ा-ए-उमरी (छूटी हुई नमाज़ों) का ट्रैकर
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">
+                *हिसाब लगाएं कि आपकी कुल कितनी नमाज़ें छूटी हैं और रोज़ाना जितनी अदा करते जाएं, उसे घटाते रहें।
+            </p>
+            <div class="table-responsive">
+                <table id="qaza-namaz-table">
+                    <thead>
+                        <tr>
+                            <th>नमाज़</th>
+                            <th>अंदाज़न कुल छूटी नमाज़ें (A)</th>
+                            <th>अब तक अदा की गईं (B)</th>
+                            <th>बाक़ी नमाज़ें (A - B)</th>
+                            <th>रोज़ाना का निशाना (लक्ष्य)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>फ़ज्र (2 रकात फ़र्ज़)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ज़ुहर (4 रकात फ़र्ज़)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>अस्र (4 रकात फ़र्ज़)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>मग़रिब (3 रकात फ़र्ज़)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>इशा (4 रकात फ़र्ज़)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>वित्र (3 रकात वाजिब)</strong></td>
+                            <td><input type="number" placeholder="उदा: 300"></td>
+                            <td><input type="number" placeholder="0"></td>
+                            <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                            <td><input type="text" placeholder="1 रोज़ाना"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- QAZA ROZA & ZAKAT TRACKER -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;" class="print-grid">
+                
+                <!-- ROZA TRACKER -->
+                <div>
+                    <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--primary-color);">2. क़ज़ा रोज़ों का ट्रैकर</h3>
+                    <div class="table-responsive">
+                        <table id="qaza-roza-table">
+                            <thead>
+                                <tr>
+                                    <th>साल / रमज़ान</th>
+                                    <th>कुल छूटे रोज़े</th>
+                                    <th>अदा किए गए</th>
+                                    <th>बाक़ी</th>
+                                    <th class="no-print delete-col" style="width: 50px;">हटाएं</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dynamic Rows are populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="add-row-btn no-print" id="add-roza-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        साल जोड़ें
+                    </button>
+                </div>
+
+                <!-- ZAKAT TRACKER -->
+                <div>
+                    <h3 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--primary-color);">3. पिछली ज़कात का ट्रैकर</h3>
+                    <div class="table-responsive">
+                        <table id="zakat-table">
+                            <thead>
+                                <tr>
+                                    <th>साल</th>
+                                    <th>लाज़िम ज़कात (रु)</th>
+                                    <th>अदा की गई (रु)</th>
+                                    <th>बाक़ी (रु)</th>
+                                    <th class="no-print delete-col" style="width: 50px;">हटाएं</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dynamic Rows are populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="add-row-btn no-print" id="add-zakat-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        साल जोड़ें
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- DAILY WAZAIF TRACKER -->
+            <h3 style="margin-bottom: 12px; font-size: 1.15rem; color: var(--primary-color);">4. रोज़ाना के वज़ाइफ़ और दरूद-ओ-सलाम का ट्रैकर</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">
+                *यहाँ रोज़ाना पढ़े जाने वाले वज़ाइफ़ को दर्ज करें और रोज़ाना पूरा होने पर टिक करें।
+            </p>
+            <div class="table-responsive">
+                <table id="wazaif-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">नम्बर</th>
+                            <th style="width: 40%;">वज़ीफ़ा / ज़िक्र का नाम</th>
+                            <th style="width: 25%;">रोज़ाना की तादाद (कम से कम)</th>
+                            <th style="width: 30%;">तर्जुमे पर तवज्जो (हाँ/नहीं)</th>
+                            <th class="no-print delete-col" style="width: 50px;">हटाएं</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic Rows are populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="add-row-btn no-print" id="add-wazifa-btn" style="margin-bottom: 30px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                वज़ीफ़ा जोड़ें
+            </button>
+
+            <!-- PHYSICAL STAMINA WALKING LOG -->
+            <h3 style="margin-bottom: 12px; font-size: 1.15rem; color: var(--primary-color);">5. जिस्मानी पैदल चाल (फिटनेस) का प्रोग्रेस ट्रैकर</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">
+                *हफ़्ते दर हफ़्ते अपना फ़ासला बढ़ाएं। इसे सुबह या शाम के वक़्त पूरा करें और नीचे टिक करें।
+            </p>
+            <div class="table-responsive">
+                <table id="walking-table">
+                    <thead>
+                        <tr>
+                            <th>मरहला / महीने</th>
+                            <th>तयशुदा फ़ासला (रोज़ाना)</th>
+                            <th>रफ़्तार (Pace)</th>
+                            <th>पीर</th>
+                            <th>मङ्गल</th>
+                            <th>बुध</th>
+                            <th>जुमेरात</th>
+                            <th>जुमा</th>
+                            <th>हफ़्ता</th>
+                            <th>इतवार</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>महीना 10-9</strong></td>
+                            <td>2-3 किलोमीटर</td>
+                            <td>हल्की चाल</td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>महीना 8-7</strong></td>
+                            <td>4-5 किलोमीटर</td>
+                            <td>मध्यम चाल</td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>महीना 6-5</strong></td>
+                            <td>5-6 किलोमीटर</td>
+                            <td>तेज़ चाल</td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>महीना 4-3</strong></td>
+                            <td>6-8 किलोमीटर</td>
+                            <td>तेज़ चाल</td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>महीना 2-1</strong></td>
+                            <td>8-10 किलोमीटर</td>
+                            <td>मिश्रित गति</td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                            <td class="chk-cell"><input type="checkbox"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- DAILY LOG & PROGRESS HISTORY (SECTION 6) -->
+            <div class="tracker-section no-print" style="page-break-before: always;">
+                <h3 style="margin-bottom: 12px; font-size: 1.15rem; color: var(--primary-color);">6. रोज़ाना का रिकॉर्ड और प्रोग्रेस हिस्ट्री (Daily Entry & Progress History)</h3>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">
+                    *वज़ाइफ़ और जिस्मानी पैदल चाल (फिटनेस) का रोज़ाना का प्रोग्रेस यहाँ दर्ज करें। यह पिछले रिकॉर्ड को सेव रखेगा ताकि आप साप्ताहिक और मासिक प्रगति देख सकें।
+                </p>
+                
+                <div class="log-card">
+                    <h4 style="margin-bottom: 15px; font-size: 1rem; color: var(--primary-color);">आज का प्रोग्रेस दर्ज करें</h4>
+                    
+                    <div class="log-group" style="max-width: 250px; margin-bottom: 20px;">
+                        <label for="log-date">तारीख़ चुनें (Date)</label>
+                        <input type="date" id="log-date">
+                    </div>
+                    
+                    <div style="font-weight: bold; margin-bottom: 10px; font-size: 0.95rem; border-bottom: 1px solid var(--secondary-color); padding-bottom: 4px; color: var(--primary-color);">वज़ाइफ़ का रिकॉर्ड:</div>
+                    <div id="daily-log-form-container" class="log-grid" style="margin-bottom: 25px;">
+                        <!-- Dynamically generated based on Wazaif List -->
+                    </div>
+
+                    <div style="font-weight: bold; margin-bottom: 10px; font-size: 0.95rem; border-bottom: 1px solid var(--secondary-color); padding-bottom: 4px; color: var(--primary-color);">पैदल चाल (फिटनेस) का रिकॉर्ड:</div>
+                    <div class="log-grid" style="margin-bottom: 25px;">
+                        <div class="log-group" style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+                            <input type="checkbox" id="fitness-log-walked" style="width: 20px; height: 20px; margin: 0; cursor: pointer;">
+                            <label for="fitness-log-walked" style="margin: 0; cursor: pointer;">क्या आज आपने पैदल चाल पूरी की?</label>
+                        </div>
+                        <div class="log-group">
+                            <label for="fitness-log-distance">तय किया गया फ़ासला (किमी)</label>
+                            <input type="number" id="fitness-log-distance" placeholder="उदा: 3.5" step="0.1" min="0">
+                        </div>
+                    </div>
+
+                    <button type="button" class="add-row-btn" id="save-daily-log-btn" style="margin-top: 0;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                        रिकॉर्ड सेव करें
+                    </button>
+                </div>
+            </div>
+
+            <!-- HISTORY REPORTS SECTION -->
+            <div class="tracker-section">
+                <h3 style="margin-bottom: 12px; font-size: 1.15rem; color: var(--primary-color);">प्रोग्रेस रिपोर्ट और इतिहास (Progress Reports & History)</h3>
+                
+                <div class="tab-buttons no-print">
+                    <button type="button" class="tab-btn active" data-tab="daily">दैनिक प्रोग्रेस (Daily)</button>
+                    <button type="button" class="tab-btn" data-tab="weekly">साारीरिक/साप्ताहिक प्रोग्रेस (Weekly)</button>
+                    <button type="button" class="tab-btn" data-tab="monthly">मासिक प्रोग्रेस (Monthly)</button>
+                </div>
+
+                <div class="table-responsive" id="history-report-container" style="margin-top: 15px;">
+                    <!-- Report tables are generated by JS -->
+                </div>
+            </div>
+
+            <!-- BOTTOM PRINT BUTTON -->
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;" class="no-print">
+                <button type="button" class="add-row-btn" onclick="window.print()" style="padding: 12px 24px; font-size: 1.05rem; border-radius: 6px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    शेड्यूल प्रिंट करें / PDF सेव करें
+                </button>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            <p><strong>अल्लाह रब्बुल इज़्ज़त आपके सफ़र को आसान बनाए और हज-ए-मबरूर अता फ़रमाए।</strong></p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">तैयारकर्ता: मोहम्मद अशफ़ाक़ एवं परिवार | असल हवाला: किताब रफ़ीक़ुल हरमैन</p>
+        </div>
+
+    </div>
+
+    <!-- Script to save, load and calculate remainders dynamically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const STORAGE_KEY = 'hajj_prep_tracker_data';
+
+            // Elements
+            const qazaNamazTable = document.getElementById('qaza-namaz-table');
+            const qazaRozaTable = document.getElementById('qaza-roza-table');
+            const zakatTable = document.getElementById('zakat-table');
+            const wazaifTable = document.getElementById('wazaif-table');
+            const walkingTable = document.getElementById('walking-table');
+
+            // Default data if storage is empty
+            const defaultData = {
+                checklists: [],
+                qazaNamaz: [
+                    {total: '', ada: '', goal: '1 रोज़ाना'},
+                    {total: '', ada: '', goal: '1 रोज़ाना'},
+                    {total: '', ada: '', goal: '1 रोज़ाना'},
+                    {total: '', ada: '', goal: '1 रोज़ाना'},
+                    {total: '', ada: '', goal: '1 रोज़ाना'},
+                    {total: '', ada: '', goal: '1 रोज़ाना'}
+                ],
+                qazaRoza: [
+                    {year: '2025', total: '', completed: ''},
+                    {year: 'पुराना', total: '', completed: ''}
+                ],
+                zakat: [
+                    {year: '2025', total: '', completed: ''},
+                    {year: '2024', total: '', completed: ''}
+                ],
+                wazaif: [
+                    {name: 'दरूद-ए-पाक (जैसे: दरूद इब्राहिमी)', count: '100 बार', translation: 'हाँ (तर्जुमे के साथ)', isStatic: true},
+                    {name: 'तीसरा कलमा या इस्तिग़फ़ार', count: '100 बार', translation: 'हाँ', isStatic: true},
+                    {name: '', count: '', translation: '', placeholderName: 'यहाँ अपना वज़ीफ़ा 1 लिखें'},
+                    {name: '', count: '', translation: '', placeholderName: 'यहाँ अपना वज़ीफ़ा 2 लिखें'},
+                    {name: '', count: '', translation: '', placeholderName: 'यहाँ अपना वज़ीफ़ा 3 लिखें'}
+                ],
+                walkingLog: Array(5).fill(null).map(() => Array(7).fill(false)),
+                dailyLogs: []
+            };
+
+            let appData = {};
+            let currentReportTab = 'daily';
+
+            // Helper to generate year dropdown HTML
+            function getYearSelectHTML(selectedYear) {
+                const years = ['2030', '2029', '2028', '2027', '2026', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', 'पुराना'];
+                let options = years.map(y => {
+                    const label = y === 'पुराना' ? 'पुराना / पहले का' : y;
+                    return `<option value="${y}" ${selectedYear === y ? 'selected' : ''}>${label}</option>`;
+                }).join('');
+                return `<select style="width: 100%; border: none; background: transparent; font-family: inherit; font-size: 0.9rem;">${options}</select>`;
+            }
+
+            // Helpers for date formats
+            function formatDateHindi(dateStr) {
+                if (!dateStr) return '';
+                const parts = dateStr.split('-');
+                if (parts.length !== 3) return dateStr;
+                const year = parts[0];
+                const monthNum = parts[1];
+                const day = parseInt(parts[2]);
+                const monthNames = {
+                    '01': 'जनवरी', '02': 'फ़रवरी', '03': 'मार्च', '04': 'अप्रैल',
+                    '05': 'मई', '06': 'जून', '07': 'जुलाई', '08': 'अगस्त',
+                    '09': 'सितम्बर', '10': 'अक्टूबर', '11': 'नवम्बर', '12': 'दिसम्बर'
+                };
+                return `${day} ${monthNames[monthNum] || monthNum} ${year}`;
+            }
+
+            function getMonday(dateStr) {
+                const d = new Date(dateStr);
+                const day = d.getDay();
+                const diff = d.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
+                const mondayDate = new Date(d.setDate(diff));
+                return mondayDate.toISOString().split('T')[0];
+            }
+
+            // Load data from localStorage
+            function loadData() {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    try {
+                        const parsed = JSON.parse(raw);
+                        appData = {
+                            checklists: parsed.checklists || [],
+                            qazaNamaz: parsed.qazaNamaz || JSON.parse(JSON.stringify(defaultData.qazaNamaz)),
+                            qazaRoza: parsed.qazaRoza || JSON.parse(JSON.stringify(defaultData.qazaRoza)),
+                            zakat: parsed.zakat || JSON.parse(JSON.stringify(defaultData.zakat)),
+                            wazaif: parsed.wazaif || JSON.parse(JSON.stringify(defaultData.wazaif)),
+                            walkingLog: parsed.walkingLog || JSON.parse(JSON.stringify(defaultData.walkingLog)),
+                            dailyLogs: parsed.dailyLogs || []
+                        };
+                    } catch (e) {
+                        console.error("Error parsing localStorage data", e);
+                        appData = JSON.parse(JSON.stringify(defaultData));
+                    }
+                } else {
+                    appData = JSON.parse(JSON.stringify(defaultData));
+                }
+                applyDataToDOM();
+            }
+
+            // Save data to localStorage
+            function saveData() {
+                // Read checklist checkboxes
+                const cbs = Array.from(document.querySelectorAll('.checklist input[type="checkbox"]'));
+                appData.checklists = cbs.map(cb => cb.checked);
+
+                // Read Qaza Namaz
+                const qnRows = qazaNamazTable.querySelectorAll('tbody tr');
+                appData.qazaNamaz = Array.from(qnRows).map(tr => {
+                    const inputs = tr.querySelectorAll('input');
+                    return {
+                        total: inputs[0].value,
+                        ada: inputs[1].value,
+                        goal: inputs[3].value
+                    };
+                });
+
+                // Read Qaza Roza
+                const qrRows = qazaRozaTable.querySelectorAll('tbody tr');
+                appData.qazaRoza = Array.from(qrRows).map(tr => {
+                    const select = tr.querySelector('select');
+                    const inputs = tr.querySelectorAll('input');
+                    return {
+                        year: select.value,
+                        total: inputs[0].value,
+                        completed: inputs[1].value
+                    };
+                });
+
+                // Read Zakat
+                const zRows = zakatTable.querySelectorAll('tbody tr');
+                appData.zakat = Array.from(zRows).map(tr => {
+                    const select = tr.querySelector('select');
+                    const inputs = tr.querySelectorAll('input');
+                    return {
+                        year: select.value,
+                        total: inputs[0].value,
+                        completed: inputs[1].value
+                    };
+                });
+
+                // Read Wazaif
+                const wRows = wazaifTable.querySelectorAll('tbody tr');
+                appData.wazaif = Array.from(wRows).map(tr => {
+                    const inputs = tr.querySelectorAll('input');
+                    const isStatic = tr.getAttribute('data-static') === 'true';
+                    const placeholderName = inputs[0].placeholder || '';
+                    return {
+                        name: inputs[0].value,
+                        count: inputs[1].value,
+                        translation: inputs[2].value,
+                        isStatic: isStatic,
+                        placeholderName: placeholderName
+                    };
+                });
+
+                // Read Walking Log
+                const wlRows = walkingTable.querySelectorAll('tbody tr');
+                appData.walkingLog = Array.from(wlRows).map(tr => {
+                    const inputs = tr.querySelectorAll('td.chk-cell input[type="checkbox"]');
+                    return Array.from(inputs).map(cb => cb.checked);
+                });
+
+                // Save to localStorage
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+            }
+
+            // Apply loaded data to DOM elements
+            function applyDataToDOM() {
+                // Apply checklist checkboxes
+                const cbs = Array.from(document.querySelectorAll('.checklist input[type="checkbox"]'));
+                cbs.forEach((cb, idx) => {
+                    if (appData.checklists && appData.checklists[idx] !== undefined) {
+                        cb.checked = appData.checklists[idx];
+                    }
+                });
+
+                // Apply Qaza Namaz
+                const qnRows = qazaNamazTable.querySelectorAll('tbody tr');
+                qnRows.forEach((tr, idx) => {
+                    if (appData.qazaNamaz[idx]) {
+                        const inputs = tr.querySelectorAll('input');
+                        inputs[0].value = appData.qazaNamaz[idx].total;
+                        inputs[1].value = appData.qazaNamaz[idx].ada;
+                        inputs[3].value = appData.qazaNamaz[idx].goal;
+                    }
+                });
+
+                // Apply Qaza Roza
+                const qrBody = qazaRozaTable.querySelector('tbody');
+                qrBody.innerHTML = '';
+                appData.qazaRoza.forEach((row, idx) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${getYearSelectHTML(row.year)}</td>
+                        <td><input type="number" placeholder="0" value="${row.total}"></td>
+                        <td><input type="number" placeholder="0" value="${row.completed}"></td>
+                        <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                        <td class="no-print delete-col"><button type="button" class="delete-btn">&times;</button></td>
+                    `;
+                    qrBody.appendChild(tr);
+                });
+
+                // Apply Zakat
+                const zBody = zakatTable.querySelector('tbody');
+                zBody.innerHTML = '';
+                appData.zakat.forEach((row, idx) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${getYearSelectHTML(row.year)}</td>
+                        <td><input type="number" placeholder="0" value="${row.total}"></td>
+                        <td><input type="number" placeholder="0" value="${row.completed}"></td>
+                        <td><input type="number" readonly style="background-color: #f2f2f2;"></td>
+                        <td class="no-print delete-col"><button type="button" class="delete-btn">&times;</button></td>
+                    `;
+                    zBody.appendChild(tr);
+                });
+
+                // Apply Wazaif
+                const wBody = wazaifTable.querySelector('tbody');
+                wBody.innerHTML = '';
+                appData.wazaif.forEach((row, idx) => {
+                    const tr = document.createElement('tr');
+                    if (row.isStatic) {
+                        tr.setAttribute('data-static', 'true');
+                        tr.innerHTML = `
+                            <td>${idx + 1}</td>
+                            <td><input type="text" value="${row.name}" style="text-align: left; font-weight: bold;"></td>
+                            <td><input type="text" value="${row.count}"></td>
+                            <td><input type="text" placeholder="हाँ (तर्जुमे के साथ)" value="${row.translation}"></td>
+                            <td class="no-print delete-col"></td>
+                        `;
+                    } else {
+                        tr.innerHTML = `
+                            <td>${idx + 1}</td>
+                            <td><input type="text" placeholder="${row.placeholderName || 'यहाँ अपना वज़ीफ़ा लिखें'}" value="${row.name}" style="text-align: left;"></td>
+                            <td><input type="text" placeholder="उदा: 100 बार" value="${row.count}"></td>
+                            <td><input type="text" placeholder="-" value="${row.translation}"></td>
+                            <td class="no-print delete-col"><button type="button" class="delete-btn">&times;</button></td>
+                        `;
+                    }
+                    wBody.appendChild(tr);
+                });
+
+                // Apply Walking Log
+                const wlRows = walkingTable.querySelectorAll('tbody tr');
+                wlRows.forEach((tr, rowIdx) => {
+                    const cells = tr.querySelectorAll('td.chk-cell input[type="checkbox"]');
+                    cells.forEach((cb, colIdx) => {
+                        if (appData.walkingLog && appData.walkingLog[rowIdx] && appData.walkingLog[rowIdx][colIdx] !== undefined) {
+                            cb.checked = appData.walkingLog[rowIdx][colIdx];
+                        }
+                    });
+                });
+
+                // Dynamic render of daily log fields
+                renderDailyLogForm();
+
+                // Dynamic render of report tables
+                renderReport();
+
+                // Run calculations
+                calculateAll();
+            }
+
+            // Calculations for remains
+            function calculateAll() {
+                // Qaza Namaz
+                const qnRows = qazaNamazTable.querySelectorAll('tbody tr');
+                qnRows.forEach(row => {
+                    const inputs = row.querySelectorAll('input');
+                    const valA = parseInt(inputs[0].value) || 0;
+                    const valB = parseInt(inputs[1].value) || 0;
+                    inputs[2].value = Math.max(0, valA - valB);
+                });
+
+                // Qaza Roza
+                const qrRows = qazaRozaTable.querySelectorAll('tbody tr');
+                qrRows.forEach(row => {
+                    const inputs = row.querySelectorAll('input');
+                    if (inputs.length >= 3) {
+                        const valA = parseInt(inputs[0].value) || 0;
+                        const valB = parseInt(inputs[1].value) || 0;
+                        inputs[2].value = Math.max(0, valA - valB);
+                    }
+                });
+
+                // Zakat
+                const zRows = zakatTable.querySelectorAll('tbody tr');
+                zRows.forEach(row => {
+                    const inputs = row.querySelectorAll('input');
+                    if (inputs.length >= 3) {
+                        const valA = parseInt(inputs[0].value) || 0;
+                        const valB = parseInt(inputs[1].value) || 0;
+                        inputs[2].value = Math.max(0, valA - valB);
+                    }
+                });
+            }
+
+            // Daily Log Form Builder
+            function renderDailyLogForm() {
+                const formContainer = document.getElementById('daily-log-form-container');
+                if (!formContainer) return;
+
+                const activeWazaif = appData.wazaif.filter(w => w.name && w.name.trim() !== '');
+                let html = '';
+
+                activeWazaif.forEach((w, idx) => {
+                    // Find actual index in global wazaif list
+                    const globalIdx = appData.wazaif.indexOf(w);
+                    html += `
+                        <div class="log-group">
+                            <label>${w.name} (तादाद)</label>
+                            <input type="number" class="wazifa-log-input" data-wazifa-idx="${globalIdx}" placeholder="उदा: 100" min="0">
+                        </div>
+                    `;
+                });
+
+                if (html === '') {
+                    html = '<div style="grid-column: 1 / -1; color: var(--text-light); font-size: 0.9rem;">वज़ाइफ़ ट्रैकर में कोई वज़ीफ़ा नहीं मिला। पहले ऊपर वज़ीफ़ा जोड़ें!</div>';
+                }
+                formContainer.innerHTML = html;
+
+                // Prefill form values for current selected date
+                prefillLogForm();
+            }
+
+            // Prefill daily log form
+            function prefillLogForm() {
+                const dateVal = document.getElementById('log-date').value;
+                if (!dateVal) return;
+
+                const logEntry = appData.dailyLogs.find(l => l.date === dateVal);
+
+                // Set wazaif log inputs
+                const wInputs = document.querySelectorAll('.wazifa-log-input');
+                wInputs.forEach(input => {
+                    const globalIdx = input.getAttribute('data-wazifa-idx');
+                    const wazifaName = appData.wazaif[globalIdx] ? appData.wazaif[globalIdx].name : '';
+                    if (logEntry && logEntry.wazaif && logEntry.wazaif[wazifaName] !== undefined) {
+                        input.value = logEntry.wazaif[wazifaName];
+                    } else {
+                        input.value = '';
+                    }
+                });
+
+                // Set fitness walking inputs
+                const walkedCb = document.getElementById('fitness-log-walked');
+                const distanceInput = document.getElementById('fitness-log-distance');
+                if (logEntry) {
+                    walkedCb.checked = logEntry.walked || false;
+                    distanceInput.value = logEntry.distance !== undefined ? logEntry.distance : '';
+                } else {
+                    walkedCb.checked = false;
+                    distanceInput.value = '';
+                }
+            }
+
+            // Render Progress Reports Dashboard
+            function renderReport() {
+                const container = document.getElementById('history-report-container');
+                if (!container) return;
+
+                if (appData.dailyLogs.length === 0) {
+                    container.innerHTML = `<p style="font-size: 0.9rem; color: var(--text-light); text-align: center; padding: 25px; border: 1px dashed var(--secondary-color); border-radius: 4px; background-color: #faf9f5;">अभी कोई इतिहास रिकॉर्ड उपलब्ध नहीं है। कृपया ऊपर से तारीख़ चुनकर आज का रिकॉर्ड सेव करें।</p>`;
+                    return;
+                }
+
+                // Sort logs by date descending
+                const sortedLogs = [...appData.dailyLogs].sort((a, b) => b.date.localeCompare(a.date));
+
+                if (currentReportTab === 'daily') {
+                    let tableHTML = `
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>तारीख़ (Date)</th>
+                                    <th>पैदल चाल (किमी)</th>
+                                    <th>पढ़े गए वज़ाइफ़ और तादाद</th>
+                                    <th class="no-print" style="width: 50px;">हटाएं</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    sortedLogs.forEach((log) => {
+                        const dateFormatted = formatDateHindi(log.date);
+                        let wazaifText = '';
+                        if (log.wazaif && Object.keys(log.wazaif).length > 0) {
+                            wazaifText = Object.entries(log.wazaif)
+                                .filter(([_, count]) => count !== null && count !== '')
+                                .map(([name, count]) => `<div class="wazifa-item-row"><span>${name}</span><strong>${count} बार</strong></div>`)
+                                .join('');
+                        }
+                        if (!wazaifText) wazaifText = '<span style="color: var(--text-light); font-size:0.8rem;">-</span>';
+
+                        tableHTML += `
+                            <tr>
+                                <td><strong>${dateFormatted}</strong></td>
+                                <td>${log.walked ? `🏃‍♂️ ${log.distance || 0} किमी` : '❌ नहीं चले'}</td>
+                                <td style="text-align: left; padding: 4px 10px;">${wazaifText}</td>
+                                <td class="no-print"><button type="button" class="delete-btn delete-log-btn" data-date="${log.date}">&times;</button></td>
+                            </tr>
+                        `;
+                    });
+                    tableHTML += `</tbody></table>`;
+                    container.innerHTML = tableHTML;
+                } 
+                else if (currentReportTab === 'weekly') {
+                    const weeks = {};
+                    sortedLogs.forEach(log => {
+                        const mon = getMonday(log.date);
+                        if (!weeks[mon]) {
+                            weeks[mon] = {
+                                start: mon,
+                                distance: 0,
+                                wazaif: {},
+                                daysWalked: 0,
+                                totalLogs: 0
+                            };
+                        }
+                        weeks[mon].totalLogs += 1;
+                        if (log.walked) {
+                            weeks[mon].distance += parseFloat(log.distance) || 0;
+                            weeks[mon].daysWalked += 1;
+                        }
+                        if (log.wazaif) {
+                            Object.entries(log.wazaif).forEach(([name, count]) => {
+                                const c = parseInt(count) || 0;
+                                weeks[mon].wazaif[name] = (weeks[mon].wazaif[name] || 0) + c;
+                            });
+                        }
+                    });
+
+                    let tableHTML = `
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>हफ़्ता (Week starting on)</th>
+                                    <th>कुल पैदल दूरी (किमी)</th>
+                                    <th>चलने के दिन</th>
+                                    <th>वज़ाइफ़ की कुल तादाद</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    Object.values(weeks).forEach(wk => {
+                        const weekStartHindi = formatDateHindi(wk.start);
+                        let wazaifText = Object.entries(wk.wazaif)
+                            .map(([name, total]) => `<div class="wazifa-item-row"><span>${name}</span><strong>${total} बार</strong></div>`)
+                            .join('');
+                        if (!wazaifText) wazaifText = '-';
+
+                        tableHTML += `
+                            <tr>
+                                <td><strong>${weekStartHindi} से</strong></td>
+                                <td>🏃‍♂️ ${wk.distance.toFixed(1)} किमी</td>
+                                <td>${wk.daysWalked} / ${wk.totalLogs} दिन</td>
+                                <td style="text-align: left; padding: 4px 10px;">${wazaifText}</td>
+                            </tr>
+                        `;
+                    });
+                    tableHTML += `</tbody></table>`;
+                    container.innerHTML = tableHTML;
+                } 
+                else if (currentReportTab === 'monthly') {
+                    const months = {};
+                    sortedLogs.forEach(log => {
+                        const monthKey = log.date.substring(0, 7); // YYYY-MM
+                        if (!months[monthKey]) {
+                            months[monthKey] = {
+                                key: monthKey,
+                                distance: 0,
+                                daysWalked: 0,
+                                wazaif: {},
+                                totalLogs: 0
+                            };
+                        }
+                        months[monthKey].totalLogs += 1;
+                        if (log.walked) {
+                            months[monthKey].distance += parseFloat(log.distance) || 0;
+                            months[monthKey].daysWalked += 1;
+                        }
+                        if (log.wazaif) {
+                            Object.entries(log.wazaif).forEach(([name, count]) => {
+                                const c = parseInt(count) || 0;
+                                months[monthKey].wazaif[name] = (months[monthKey].wazaif[name] || 0) + c;
+                            });
+                        }
+                    });
+
+                    let tableHTML = `
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>महीना (Month)</th>
+                                    <th>कुल पैदल दूरी (किमी)</th>
+                                    <th>औसत (किमी / दिन)</th>
+                                    <th>वज़ाइफ़ की कुल तादाद</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    Object.values(months).forEach(mn => {
+                        const [year, monthNum] = mn.key.split('-');
+                        const monthNames = {
+                            '01': 'जनवरी', '02': 'फ़रवरी', '03': 'मार्च', '04': 'अप्रैल',
+                            '05': 'मई', '06': 'जून', '07': 'जुलाई', '08': 'अगस्त',
+                            '09': 'सितम्बर', '10': 'अक्टूबर', '11': 'नवम्बर', '12': 'दिसम्बर'
+                        };
+                        const monthHindi = `${monthNames[monthNum] || monthNum} ${year}`;
+                        const avg = mn.distance / mn.totalLogs;
+
+                        let wazaifText = Object.entries(mn.wazaif)
+                            .map(([name, total]) => `<div class="wazifa-item-row"><span>${name}</span><strong>${total} बार</strong></div>`)
+                            .join('');
+                        if (!wazaifText) wazaifText = '-';
+
+                        tableHTML += `
+                            <tr>
+                                <td><strong>${monthHindi}</strong></td>
+                                <td>🏃‍♂️ ${mn.distance.toFixed(1)} किमी</td>
+                                <td>🏃‍♂️ ${avg.toFixed(2)} किमी/दिन</td>
+                                <td style="text-align: left; padding: 4px 10px;">${wazaifText}</td>
+                            </tr>
+                        `;
+                    });
+                    tableHTML += `</tbody></table>`;
+                    container.innerHTML = tableHTML;
+                }
+            }
+
+            // Event Listeners for calculations & changes (Delegation)
+            document.addEventListener('input', function(e) {
+                if (e.target.tagName === 'INPUT') {
+                    calculateAll();
+                    saveData();
+                }
+            });
+
+            document.addEventListener('change', function(e) {
+                if (e.target.tagName === 'SELECT' || (e.target.tagName === 'INPUT' && e.target.type === 'checkbox')) {
+                    saveData();
+                }
+            });
+
+            // Date Change Trigger Prefill
+            document.getElementById('log-date').addEventListener('change', prefillLogForm);
+
+            // Save Daily Log Button
+            document.getElementById('save-daily-log-btn').addEventListener('click', function() {
+                const dateVal = document.getElementById('log-date').value;
+                if (!dateVal) {
+                    alert("कृपया तारीख़ चुनें!");
+                    return;
+                }
+
+                // Read walking inputs
+                const walked = document.getElementById('fitness-log-walked').checked;
+                const distanceVal = document.getElementById('fitness-log-distance').value;
+                const distance = walked ? parseFloat(distanceVal) || 0 : 0;
+
+                // Read wazaif inputs
+                const wazaifLogs = {};
+                const wInputs = document.querySelectorAll('.wazifa-log-input');
+                wInputs.forEach(input => {
+                    const globalIdx = input.getAttribute('data-wazifa-idx');
+                    const wazifaName = appData.wazaif[globalIdx] ? appData.wazaif[globalIdx].name : '';
+                    if (wazifaName && wazifaName.trim() !== '') {
+                        wazaifLogs[wazifaName] = input.value;
+                    }
+                });
+
+                // Find if entry for this date already exists
+                let logEntry = appData.dailyLogs.find(l => l.date === dateVal);
+                if (logEntry) {
+                    logEntry.walked = walked;
+                    logEntry.distance = distance;
+                    logEntry.wazaif = wazaifLogs;
+                } else {
+                    appData.dailyLogs.push({
+                        date: dateVal,
+                        walked: walked,
+                        distance: distance,
+                        wazaif: wazaifLogs
+                    });
+                }
+
+                // Sort logs by date descending
+                appData.dailyLogs.sort((a, b) => b.date.localeCompare(a.date));
+
+                // Save and update report
+                saveData();
+                renderReport();
+                alert("आज का प्रोग्रेस सेव हो गया है!");
+            });
+
+            // Add Row Buttons
+            document.getElementById('add-roza-btn').addEventListener('click', function() {
+                appData.qazaRoza.push({year: '2026', total: '', completed: ''});
+                applyDataToDOM();
+                saveData();
+            });
+
+            document.getElementById('add-zakat-btn').addEventListener('click', function() {
+                appData.zakat.push({year: '2026', total: '', completed: ''});
+                applyDataToDOM();
+                saveData();
+            });
+
+            document.getElementById('add-wazifa-btn').addEventListener('click', function() {
+                appData.wazaif.push({name: '', count: '', translation: '', isStatic: false, placeholderName: 'यहाँ अपना वज़ीफ़ा लिखें'});
+                applyDataToDOM();
+                saveData();
+            });
+
+            // Delete Row / History log Buttons (Delegation)
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('delete-btn') || e.target.parentElement.classList.contains('delete-btn')) {
+                    const btn = e.target.classList.contains('delete-btn') ? e.target : e.target.parentElement;
+                    
+                    // Check if it's a history log delete button
+                    if (btn.classList.contains('delete-log-btn')) {
+                        const dateVal = btn.getAttribute('data-date');
+                        if (confirm(`क्या आप ${formatDateHindi(dateVal)} का रिकॉर्ड इतिहास से हटाना चाहते हैं?`)) {
+                            const idx = appData.dailyLogs.findIndex(l => l.date === dateVal);
+                            if (idx !== -1) {
+                                appData.dailyLogs.splice(idx, 1);
+                                saveData();
+                                renderReport();
+                                prefillLogForm();
+                            }
+                        }
+                        return;
+                    }
+
+                    // Otherwise delete row from table
+                    const tr = btn.closest('tr');
+                    const tbody = tr.parentElement;
+                    const table = tbody.closest('table');
+                    const rowIndex = Array.from(tbody.children).indexOf(tr);
+
+                    if (table.id === 'qaza-roza-table') {
+                        appData.qazaRoza.splice(rowIndex, 1);
+                    } else if (table.id === 'zakat-table') {
+                        appData.zakat.splice(rowIndex, 1);
+                    } else if (table.id === 'wazaif-table') {
+                        appData.wazaif.splice(rowIndex, 1);
+                    }
+
+                    applyDataToDOM();
+                    saveData();
+                }
+            });
+
+            // Switch Report Tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentReportTab = this.getAttribute('data-tab');
+                    renderReport();
+                });
+            });
+
+            // Initialize default date to today
+            const dateInput = document.getElementById('log-date');
+            if (dateInput) {
+                dateInput.value = new Date().toISOString().split('T')[0];
+            }
+
+            // Initial load
+            loadData();
+        });
+    </script>
+</body>
+</html>
